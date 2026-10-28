@@ -1,0 +1,463 @@
+/* Device Chassis & Bezel Styles */
+
+/* Base device chassis shadows & finishes */
+.device-chassis {
+  position: relative;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              height 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-radius 0.3s ease;
+  user-select: none;
+}
+
+/* 1. Chassis Color Themes - Real-World Flagship Hardware Finishes */
+
+/* Space Black (Deep Obsidian with dark specular sheen) */
+.chassis-space-black {
+  background: linear-gradient(145deg, #1f1f23 0%, #121215 45%, #08080a 80%, #1a1a1e 100%);
+  border: 4px solid #202024;
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 25px 65px -12px rgba(0, 0, 0, 0.98),
+    0 10px 25px -5px rgba(0, 0, 0, 0.8);
+}
+
+/* Natural Titanium (Satin Grade 5 Titanium with warm metallic bevel) */
+.chassis-natural-titanium, .chassis-titanium {
+  background: linear-gradient(145deg, #5c5d61 0%, #3e3f43 35%, #2a2a2d 70%, #525358 100%);
+  border: 4px solid #6b6b72;
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.22),
+    0 25px 65px -12px rgba(0, 0, 0, 0.88),
+    0 10px 25px -5px rgba(0, 0, 0, 0.65);
+}
+
+/* Silver (Crisp Anodized Aluminum with mirror-cut highlights) */
+.chassis-silver {
+  background: linear-gradient(145deg, #ffffff 0%, #ebebef 40%, #d5d5db 75%, #ffffff 100%);
+  border: 4px solid #e2e2e8;
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.7),
+    0 25px 65px -12px rgba(0, 0, 0, 0.75),
+    0 10px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+/* Starlight (Warm Champagne Pearl Finish) */
+.chassis-starlight {
+  background: linear-gradient(145deg, #faf7f2 0%, #ede7dc 40%, #dad2c3 75%, #fbf9f5 100%);
+  border: 4px solid #dfd8cc;
+  box-shadow: 
+    0 0 0 1px rgba(255, 250, 240, 0.6),
+    0 25px 65px -12px rgba(0, 0, 0, 0.75),
+    0 10px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+/* Midnight (Deep Ink Navy / Dark Obsidian) */
+.chassis-midnight {
+  background: linear-gradient(145deg, #242528 0%, #131416 50%, #0a0a0c 100%);
+  border: 4px solid #27272a;
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 25px 65px -12px rgba(0, 0, 0, 0.95),
+    0 10px 25px -5px rgba(0, 0, 0, 0.7);
+}
+
+/* Rose Gold / Pink (Soft Metallic Blush Tone) */
+.chassis-rose-gold, .chassis-pink {
+  background: linear-gradient(145deg, #faeae5 0%, #f3cdc4 35%, #e2a89c 70%, #faede8 100%);
+  border: 4px solid #dda093;
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.45),
+    0 25px 65px -12px rgba(0, 0, 0, 0.75),
+    0 10px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+/* Gold */
+.chassis-gold {
+  background: linear-gradient(145deg, #f8f1e2 0%, #ecdcb9 45%, #cbb085 80%, #f8f1e2 100%);
+  border: 4px solid #caa97b;
+  box-shadow: 
+    0 0 0 1px rgba(255, 240, 205, 0.4),
+    0 25px 65px -12px rgba(0, 0, 0, 0.8),
+    0 10px 25px -5px rgba(0, 0, 0, 0.55);
+}
+
+/* Sierra Blue / Pacific Azure */
+.chassis-blue {
+  background: linear-gradient(145deg, #e4eff8 0%, #bfd8ed 45%, #94b9da 80%, #e4eff8 100%);
+  border: 4px solid #94b9da;
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.4),
+    0 25px 65px -12px rgba(0, 0, 0, 0.75),
+    0 10px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+/* Minimalist borderless mode */
+.chassis-minimal {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.7);
+}
+
+/* 2. Inner Screen Bezel */
+.screen-bezel {
+  position: relative;
+  overflow: hidden;
+  background-color: #000000;
+  box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.95);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.screen-bezel iframe {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.screen-bezel iframe::-webkit-scrollbar,
+.screen-bezel *::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* 3. Subtle Antenna Seams */
+.antenna-line-left-top {
+  position: absolute;
+  left: -2px;
+  top: 72px;
+  width: 2px;
+  height: 3px;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+.antenna-line-left-bottom {
+  position: absolute;
+  left: -2px;
+  bottom: 72px;
+  width: 2px;
+  height: 3px;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+.antenna-line-right-top {
+  position: absolute;
+  right: -2px;
+  top: 72px;
+  width: 2px;
+  height: 3px;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+.antenna-line-right-bottom {
+  position: absolute;
+  right: -2px;
+  bottom: 72px;
+  width: 2px;
+  height: 3px;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+/* 4. Hardware Physical Buttons */
+.hardware-button-left-1 {
+  position: absolute;
+  left: -5px;
+  top: 90px;
+  width: 4px;
+  height: 32px;
+  border-radius: 2px 0 0 2px;
+}
+
+.hardware-button-left-2 {
+  position: absolute;
+  left: -5px;
+  top: 135px;
+  width: 4px;
+  height: 52px;
+  border-radius: 2px 0 0 2px;
+}
+
+.hardware-button-left-3 {
+  position: absolute;
+  left: -5px;
+  top: 195px;
+  width: 4px;
+  height: 52px;
+  border-radius: 2px 0 0 2px;
+}
+
+.hardware-button-right {
+  position: absolute;
+  right: -5px;
+  top: 125px;
+  width: 4px;
+  height: 75px;
+  border-radius: 0 2px 2px 0;
+}
+
+/* Hardware button color matching per chassis */
+/* Pink Buttons */
+.chassis-pink .hardware-button-left-1,
+.chassis-pink .hardware-button-left-2,
+.chassis-pink .hardware-button-left-3 {
+  background: linear-gradient(to right, #fcebe6, #ebb6aa);
+  border: 0.5px solid #dca092;
+  box-shadow: -1px 0 2px rgba(0, 0, 0, 0.25);
+}
+.chassis-pink .hardware-button-right {
+  background: linear-gradient(to left, #fcebe6, #ebb6aa);
+  border: 0.5px solid #dca092;
+  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.25);
+}
+
+/* Titanium Buttons */
+.chassis-titanium .hardware-button-left-1,
+.chassis-titanium .hardware-button-left-2,
+.chassis-titanium .hardware-button-left-3 {
+  background: linear-gradient(to right, #525258, #3a3a3e);
+  border: 0.5px solid #63636b;
+  box-shadow: -1px 0 2px rgba(0, 0, 0, 0.4);
+}
+.chassis-titanium .hardware-button-right {
+  background: linear-gradient(to left, #525258, #3a3a3e);
+  border: 0.5px solid #63636b;
+  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Midnight Buttons */
+.chassis-midnight .hardware-button-left-1,
+.chassis-midnight .hardware-button-left-2,
+.chassis-midnight .hardware-button-left-3 {
+  background: linear-gradient(to right, #333338, #1c1c1f);
+  border: 0.5px solid #3f3f46;
+  box-shadow: -1px 0 2px rgba(0, 0, 0, 0.5);
+}
+.chassis-midnight .hardware-button-right {
+  background: linear-gradient(to left, #333338, #1c1c1f);
+  border: 0.5px solid #3f3f46;
+  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Silver Buttons */
+.chassis-silver .hardware-button-left-1,
+.chassis-silver .hardware-button-left-2,
+.chassis-silver .hardware-button-left-3 {
+  background: linear-gradient(to right, #ffffff, #d4d4d8);
+  border: 0.5px solid #c4c4c8;
+  box-shadow: -1px 0 2px rgba(0, 0, 0, 0.25);
+}
+.chassis-silver .hardware-button-right {
+  background: linear-gradient(to left, #ffffff, #d4d4d8);
+  border: 0.5px solid #c4c4c8;
+  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.25);
+}
+
+/* Gold Buttons */
+.chassis-gold .hardware-button-left-1,
+.chassis-gold .hardware-button-left-2,
+.chassis-gold .hardware-button-left-3 {
+  background: linear-gradient(to right, #f8f1e2, #caa97b);
+  border: 0.5px solid #bda072;
+  box-shadow: -1px 0 2px rgba(0, 0, 0, 0.3);
+}
+.chassis-gold .hardware-button-right {
+  background: linear-gradient(to left, #f8f1e2, #caa97b);
+  border: 0.5px solid #bda072;
+  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Blue Buttons */
+.chassis-blue .hardware-button-left-1,
+.chassis-blue .hardware-button-left-2,
+.chassis-blue .hardware-button-left-3 {
+  background: linear-gradient(to right, #e4eff8, #94b9da);
+  border: 0.5px solid #84a8c9;
+  box-shadow: -1px 0 2px rgba(0, 0, 0, 0.25);
+}
+.chassis-blue .hardware-button-right {
+  background: linear-gradient(to left, #e4eff8, #94b9da);
+  border: 0.5px solid #84a8c9;
+  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.25);
+}
+
+/* Android Hardware Buttons (Right-side Volume Rocker & Power Button) */
+.hardware-button-android-volume {
+  position: absolute;
+  right: -5px;
+  top: 110px;
+  width: 4px;
+  height: 68px;
+  border-radius: 0 2px 2px 0;
+}
+
+.hardware-button-android-power {
+  position: absolute;
+  right: -5px;
+  top: 195px;
+  width: 4px;
+  height: 40px;
+  border-radius: 0 2px 2px 0;
+}
+
+.chassis-pink .hardware-button-android-volume,
+.chassis-pink .hardware-button-android-power {
+  background: linear-gradient(to left, #fcebe6, #ebb6aa);
+  border: 0.5px solid #dca092;
+  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.25);
+}
+
+.chassis-titanium .hardware-button-android-volume,
+.chassis-titanium .hardware-button-android-power {
+  background: linear-gradient(to left, #525258, #3a3a3e);
+  border: 0.5px solid #63636b;
+  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.4);
+}
+
+.chassis-midnight .hardware-button-android-volume,
+.chassis-midnight .hardware-button-android-power {
+  background: linear-gradient(to left, #333338, #1c1c1f);
+  border: 0.5px solid #3f3f46;
+  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.chassis-silver .hardware-button-android-volume,
+.chassis-silver .hardware-button-android-power {
+  background: linear-gradient(to left, #ffffff, #d4d4d8);
+  border: 0.5px solid #c4c4c8;
+  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.25);
+}
+
+.chassis-gold .hardware-button-android-volume,
+.chassis-gold .hardware-button-android-power {
+  background: linear-gradient(to left, #f8f1e2, #caa97b);
+  border: 0.5px solid #bda072;
+  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.chassis-blue .hardware-button-android-volume,
+.chassis-blue .hardware-button-android-power {
+  background: linear-gradient(to left, #e4eff8, #94b9da);
+  border: 0.5px solid #84a8c9;
+  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.25);
+}
+
+/* 5. Notch & Island styles */
+.dynamic-island {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 30px;
+  background-color: #000000;
+  border-radius: 20px;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.dynamic-island-lens {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #1c2738 0%, #08080a 70%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dynamic-island-sensor {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #08080a;
+}
+
+.classic-notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 29px;
+  background-color: #000000;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.speaker-slit {
+  height: 4px;
+  background: #18181b;
+  border-radius: 3px;
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+}
+
+.punch-hole {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #1e293b 0%, #000000 80%);
+  border: 1.5px solid #111827;
+  z-index: 40;
+  box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+/* 6. Home Indicator Bar */
+.home-indicator {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4.5px;
+  border-radius: 100px;
+  z-index: 40;
+  pointer-events: none;
+  backdrop-filter: blur(4px);
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.home-indicator-dark {
+  background-color: rgba(15, 23, 42, 0.88);
+}
+
+.home-indicator-light {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+/* 7. Dot Grid Background for Canvas */
+.canvas-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+/* 8. Touch Simulation Indicator */
+.touch-indicator {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.35);
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(1px);
+  transition: transform 0.05s ease-out, background 0.15s ease, border-color 0.15s ease;
+}
+
+.touch-indicator.touch-active {
+  background: rgba(59, 130, 246, 0.45);
+  border-color: rgba(96, 165, 250, 0.9);
+  transform: translate(-50%, -50%) scale(0.85);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
