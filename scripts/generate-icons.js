@@ -92,7 +92,8 @@ if (!fs.existsSync(iconsDir)) {
 }
 
 fs.writeFileSync(path.join(iconsDir, 'icon16.png'), createPNG(16, 16));
+fs.writeFileSync(path.join(iconsDir, 'icon32.png'), createPNG(32, 32));
 fs.writeFileSync(path.join(iconsDir, 'icon48.png'), createPNG(48, 48));
 fs.writeFileSync(path.join(iconsDir, 'icon128.png'), createPNG(128, 128));
 
-console.log('Generated extension icons: 16x16, 48x48, 128x128 in icons/');
+console.log('Generated extension icons: 16x16, 32x32, 48x48, 128x128 in icons/');
